@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./memorygame.js"></script>
+    <title>Warrior Queens Memory Game</title>
+  </head>
+  <body>
+    <div class="warrior background">
+      <div class="warrior match game">
+        <h1>Warrior Match Games</h1>
+      </div>
+      <div class="nav links">
+        <a href="#">Hint</a>
+        <a href="#">Settings</a>
+        <a href="#">Card Theme</a>
+      </div>
+      <button class="start">Start Game</button>
+      <button class="new game">New Game</button>
+      <button class="pause game">Pause Game</button>
+      <button class="reset game">Reset Game</button>
+      <form action="">
+        <input type="text" placeholder="Player 1" />VS
+        <input type="text" placeholder="Player 2" />
+      </form>
+      <div class="row">
+        <div
+          data-color="red"
+          class="card red color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="teal"
+          class="card teal color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="white"
+          class="card white color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="yellow"
+          class="card yellow color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+      </div>
+      <div class="row">
+        <div
+          data-color="blue"
+          class="card blue color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="orange"
+          class="card orange color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="black"
+          class="card black color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="gray"
+          class="card gray color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+      </div>
+      <div class="row">
+        <div
+          data-color="teal"
+          class="card teal color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="orange"
+          class="card orange color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="white"
+          class="card white color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="black"
+          class="card black color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+      </div>
+      <div class="row">
+        <div
+          data-color="yellow"
+          class="card yellow color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="blue"
+          class="card blue color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="red"
+          class="card red color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="gray"
+          class="card gray color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+      </div>
+    </div>
+  </body>
+</html>
