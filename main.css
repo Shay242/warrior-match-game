@@ -64,6 +64,12 @@
   background-color: brown;
   color: blanchedalmond;
 }
+.sea-face-back{
+    margin-top: 5rem;
+}
+.land-face-back{
+    margin-top: 5rem;
+}
 .row{
     text-align: center;
 }
