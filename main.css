@@ -1,4 +1,4 @@
-.main-background {
+body {
   background-image: url(https://i.pinimg.com/originals/45/1f/6a/451f6ab6b42c256d36e89a42b62b650d.jpg);
   background-repeat: no-repeat;
   background-size: auto;
@@ -6,6 +6,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin:0%;
 }
 .welcome {
   font-size: large;
@@ -36,35 +37,35 @@
   height: 100vh;
   width: 100%;
 }
-.start {
+..start {
   border-radius: 20rem;
   width: 100px;
   padding: 8px;
   background-color: blue;
   color: blanchedalmond;
 }
-.new-game {
+..new-game {
   border-radius: 20rem;
   width: 100px;
   padding: 8px;
   background-color: purple;
   color: blanchedalmond;
 }
-.pause-game {
+..pause-game {
   border-radius: 20rem;
   width: 100px;
   padding: 8px;
   background-color: green;
   color: blanchedalmond;
 }
-.reset-game {
+..reset-game {
   border-radius: 20rem;
   width: 100px;
   padding: 8px;
   background-color: brown;
   color: blanchedalmond;
 }
-.sea-face-back{
+..sea-face-back{
     margin-top: 5rem;
 }
 .land-face-back{
@@ -73,7 +74,7 @@
 .row{
     text-align: center;
 }
-.card{
+..card{
     display: inline-block;
     width: 100px;
     height: 100px;
