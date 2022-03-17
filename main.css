@@ -13,7 +13,7 @@ body {
   text-align: center;
   flex-direction: row;
 }
-.glow {
+..glow {
   font-size: 20px;
   color: blue;
   text-align: center;
@@ -74,7 +74,7 @@ body {
 .row{
     text-align: center;
 }
-..card{
+.card{
     display: inline-block;
     width: 100px;
     height: 100px;
