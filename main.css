@@ -8,9 +8,9 @@ body {
 .welcome {
   font-size: large;
   text-align: center;
-  flex-direction: row;
+  text-decoration: wavy;
 }
-.glow {
+.engineered {
   font-size: 20px;
   color: blue;
   text-align: center;
@@ -34,11 +34,40 @@ body {
   height: 100vh;
   width: 100%;
 }
+a {
+  font-size: 20px;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: brown;
+  padding: 10px;
+  display: flex;
+}
+h2{
+    font-size: large;
+    color: red;
+    font-style: oblique;
+}
+h3{
+  font-size: large;
+  color: black;
+  font-style: oblique;
+}
+h4{
+    font-size: large;
+    color: black;
+    font-style: oblique;
+}
+h5{
+  font-size: large;
+  color: black;
+  font-style: oblique;
+}
 .start {
   border-radius: 20rem;
   width: 100px;
   padding: 8px;
-  background-color: blue;
+  background-color: brown;
   color: blanchedalmond;
 }
 .new-game {
@@ -48,7 +77,7 @@ body {
   background-color: purple;
   color: blanchedalmond;
 }
-..pause-game {
+.pause-game {
   border-radius: 20rem;
   width: 100px;
   padding: 8px;
@@ -62,16 +91,18 @@ body {
   background-color: brown;
   color: blanchedalmond;
 }
-..sea-face-back{
-    margin-top: 5rem;
+.sea-face-back {
+  margin-top: 5rem;
 }
-.land-face-back{
-    margin-top: 5rem;
+.land-face-back {
+  margin-top: 5rem;
 }
-.first, .second, .third, .fourth{
-  text-align: center;
-}
-.card{
+.first,
+.second,
+.third,
+.fourth,
+
+.card {
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -79,34 +110,34 @@ body {
   background-image: url(https://image.shutterstock.com/image-vector/trendy-lettering-queen-gold-crown-260nw-1748371328.jpg);
   background-position: center;
 }
-.card:hover{
-    box-shadow: 0px 0px 0px 3px rgb(45, 0, 128);
-    box-sizing: border-box; 
+.card:hover {
+  box-shadow: 0px 0px 0px 3px rgb(45, 0, 128);
+  box-sizing: border-box;
 }
-.red{
-    background-color: red;
+.red {
+  background-color: red;
 }
-.teal{
-    background-color: teal;
+.teal {
+  background-color: teal;
 }
-.gray{
-    background-color: gray;
+.gray {
+  background-color: gray;
 }
-.orange{
-    background-color: orange;
+.orange {
+  background-color: orange;
 }
-.black{
-    background-color: black;
+.black {
+  background-color: black;
 }
-.yellow{
-    background-color: yellow;
+.yellow {
+  background-color: yellow;
 }
-.white{
-    background-color: white;
+.white {
+  background-color: white;
 }
-.blue{
-    background-color: blue;
+.blue {
+  background-color: blue;
 }
-.color-hidden{
-    background-color: plum;
+.color-hidden {
+  background-color: plum;
 }
