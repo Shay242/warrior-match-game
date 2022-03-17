@@ -13,7 +13,7 @@ body {
   text-align: center;
   flex-direction: row;
 }
-..glow {
+.glow {
   font-size: 20px;
   color: blue;
   text-align: center;
@@ -37,28 +37,28 @@ body {
   height: 100vh;
   width: 100%;
 }
-..start {
+.start {
   border-radius: 20rem;
   width: 100px;
   padding: 8px;
   background-color: blue;
   color: blanchedalmond;
 }
-..new-game {
+.new-game {
   border-radius: 20rem;
   width: 100px;
   padding: 8px;
   background-color: purple;
   color: blanchedalmond;
 }
-..pause-game {
+.pause-game {
   border-radius: 20rem;
   width: 100px;
   padding: 8px;
   background-color: green;
   color: blanchedalmond;
 }
-..reset-game {
+.reset-game {
   border-radius: 20rem;
   width: 100px;
   padding: 8px;
