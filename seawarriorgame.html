@@ -6,99 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./main.css" />
     <script src="./main.js"></script>
-    <title>Sea Warrior Games</title>
+    <title>Sea Warrior Queens Match Game</title>
   </head>
   <body>
     <div class="seawarriorbackground">
-      <div class="sea-warrior-game">
-      <h1 class="sea-title">Warrior Match Games</h1>
+      <div class="Sea-warrior-match-game">
+        <h1 style="text-align: center">Warrior Queens Match Games</h1>
       </div>
       <div class="nav links">
         <a href="#">Hint</a>
-        <a href="#">Settings</a>
-        <a href="#">Card Theme</a>
       </div>
       <button class="start">Start Game</button>
+
       <button class="new-game">New Game</button>
-      <button class="pause-game">Pause Game</button>
+      
       <button class="reset-game">Reset Game</button>
-      <div class="game-container"></div>
-      <div class="game-info-container">
-        <div class="game-info">Time <span id="time-remaining">100</span></div>
-        <div class="game-info">Flips <span id="flips">0</span></div>
+
+      <div class="first">
+        <div
+          data-color="red"
+          class="card red color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="teal"
+          class="card teal color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="white"
+          class="card white color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="yellow"
+          class="card yellow color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
       </div>
-      <div class="row">
-        <div class="card">
-          <div class="card-back card-face"></div>
-          <div class="card-front card-face"></div>
-        </div>
-        <div class="card">
-          <div class="card-back card-face"></div>
-          <div class="card-front card-face"></div>
-        </div>
-        <div class="card">
-          <div class="card-back card-face"></div>
-          <div class="card-front card-face"></div>
-        </div>
-        <div class="card">
-          <div class="card-back card-face"></div>
-          <div class="card-front card-face"></div>
-        </div>
-        <div class="row">
-          <div class="card">
-            <div class="card-back card-face"></div>
-            <div class="card-front card-face"></div>
-          </div>
-          <div class="card">
-            <div class="card-back card-face"></div>
-            <div class="card-front card-face"></div>
-          </div>
-          <div class="card">
-            <div class="card-back card-face"></div>
-            <div class="card-front card-face"></div>
-          </div>
-          <div class="card">
-            <div class="card-back card-face"></div>
-            <div class="card-front card-face"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="card">
-            <div class="card-back card-face"></div>
-            <div class="card-front card-face"></div>
-          </div>
-          <div class="card">
-            <div class="card-back card-face"></div>
-            <div class="card-front card-face"></div>
-          </div>
-          <div class="card">
-            <div class="card-back card-face"></div>
-            <div class="card-front card-face"></div>
-          </div>
-          <div class="card">
-            <div class="card-back card-face"></div>
-            <div class="card-front card-face"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="card">
-            <div class="card-back card-face"></div>
-            <div class="card-front card-face"></div>
-          </div>
-          <div class="card">
-            <div class="card-back card-face"></div>
-            <div class="card-front card-face"></div>
-          </div>
-          <div class="card">
-            <div class="card-back card-face"></div>
-            <div class="card-front card-face"></div>
-          </div>
-          <div class="card">
-            <div class="card-back card-face"></div>
-            <div class="card-front card-face"></div>
-          </div>
-        </div>
+      <div class="second">
+        <div
+          data-color="blue"
+          class="card blue color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="orange"
+          class="card orange color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="black"
+          class="card black color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="gray"
+          class="card gray color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
       </div>
+      <div class="third">
+        <div
+          data-color="teal"
+          class="card teal color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="orange"
+          class="card orange color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="white"
+          class="card white color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="black"
+          class="card black color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+      </div>
+      <div class="fourth">
+        <div
+          data-color="yellow"
+          class="card yellow color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="blue"
+          class="card blue color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="red"
+          class="card red color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          data-color="gray"
+          class="card gray color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+      </div>
+      <div class="timmer">Time <span id="time-remaining">100</span></div>
+      <div class="timmer">Flips <span id="flips">0</span></div>
     </div>
   </body>
 </html>

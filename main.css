@@ -1,12 +1,9 @@
 body {
-  background-image: url(https://i.pinimg.com/originals/45/1f/6a/451f6ab6b42c256d36e89a42b62b650d.jpg);
+  background-image: url(https://uspto.report/TM/90660830/mark.png);
   background-repeat: no-repeat;
-  background-size: auto;
+  background-position: center;
   height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin:0%;
+  width: 100vw;
 }
 .welcome {
   font-size: large;
@@ -51,7 +48,7 @@ body {
   background-color: purple;
   color: blanchedalmond;
 }
-.pause-game {
+..pause-game {
   border-radius: 20rem;
   width: 100px;
   padding: 8px;
@@ -71,15 +68,16 @@ body {
 .land-face-back{
     margin-top: 5rem;
 }
-.row{
-    text-align: center;
+.first, .second, .third, .fourth{
+  text-align: center;
 }
 .card{
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background-color: plum;
-    cursor: pointer;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-image: url(https://image.shutterstock.com/image-vector/trendy-lettering-queen-gold-crown-260nw-1748371328.jpg);
+  background-position: center;
 }
 .card:hover{
     box-shadow: 0px 0px 0px 3px rgb(45, 0, 128);
