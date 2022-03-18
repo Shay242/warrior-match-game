@@ -114,14 +114,16 @@ h5{
   box-shadow: 0px 0px 0px 3px rgb(45, 0, 128);
   box-sizing: border-box;
 }
-.build-here{
+.build-here:hover{
   background-color: transparent;
-  width: 300px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border: 1px solid #f1f1f1;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
+  /* perspective: 500px; */
+  /* transform-style: preserve-3d; */
+  transition: transform 5s;
+  transform: rotateY(180deg);
+  
 }
 .red {
   background-color: red;
