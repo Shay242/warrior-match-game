@@ -3,12 +3,20 @@
 //     card.classList.toggle("flipcard");
 // })
 const buildHtml = () => {
-    cont img1 = document.createElement("(https://image.shutterstock.com/image-vector/trendy-lettering-queen-gold-crown-260nw-1748371328.jpg)");
+  const build = document.getElementById("build");
+  const firstRow = document.createElement("div");
+  const cardContainer = document.createElement("div");
+  const frontCard = document.createElement("div");
+  const img1 = document.createElement("img");
 
-    img1.src =
+  firstRow.className.add("first-row");
+  cardContainer.className.add("card-container");
+  frontCard.className.add("front-card");
+
+  img1.src =
     "https://image.shutterstock.com/image-vector/trendy-lettering-queen-gold-crown-260nw-1748371328.jpg";
 
-    for (let i = 0; i < 4; i++) {}
-
-    buildHtml.apprendChild(img1);
+  cardContainer.appendChild(frontCard);
+  firstRow.appendChild(cardContainer);
+  build.appendChild(firstRow);
 };

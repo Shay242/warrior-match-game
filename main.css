@@ -110,9 +110,18 @@ h5{
   background-image: url(https://image.shutterstock.com/image-vector/trendy-lettering-queen-gold-crown-260nw-1748371328.jpg);
   background-position: center;
 }
-.card:hover {
+.card-hover {
   box-shadow: 0px 0px 0px 3px rgb(45, 0, 128);
   box-sizing: border-box;
+}
+.build-here{
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
 }
 .red {
   background-color: red;
