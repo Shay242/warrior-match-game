@@ -46,3 +46,5 @@ const buildHtml = () => {
     buildInnerHtml(buildIds[i]);
   }
 };
+const cardContainer = document.getElementById("");
+cardContainer.classList.add("flip-card");
