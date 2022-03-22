@@ -11,10 +11,10 @@ const buildHtml = () => {
   const backCard = document.createElement("div");
 
 
-//   for (let i = 0; i < 3; i++ ) {
-//       const div = document.createElement("div")
-//      cardContainer.appendChild(`div${i}`); 
-//   }
+  // for (let i = 0; i < 3; i++ ) {
+  //     const div = document.createElement("div")
+  //    cardContainer.appendChild(`div${i}`); 
+
 
   firstRow.classList.add("first-row");
   cardContainer.classList.add("card-container");
@@ -86,10 +86,10 @@ const buildHtml = () => {
   const img1 = document.createElement("img");
   const backCard = document.createElement("div");
 
-  //   for (let i = 0; i < 3; i++ ) {
-  //       const div = document.createElement("div")
-  //      cardContainer.appendChild(`div${i}`);
-  //   }
+    // for (let i = 0; i < 3; i++ ) {
+    //     const div = document.createElement("div")
+    //    cardContainer.appendChild(`div${i}`);
+    // }
 
   fourthRow.classList.add("fourth-row");
   cardContainer.classList.add("card-container");
