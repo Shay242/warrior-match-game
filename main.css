@@ -11,14 +11,14 @@ body {
   text-align: center;
   text-decoration: wavy;
 }
-/* .engineered {
+.engineered {
   font-size: 20px;
   color: blue;
   text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
-} */
+}
 .landwarriorbackground {
   background-image: url(https://wallup.net/wp-content/uploads/2015/12/240633-hill-trees-nature-landscape-photography-field-green.jpg);
   background-repeat: no-repeat;
@@ -90,7 +90,31 @@ h5{
   background-color: green;
   color: blanchedalmond;
 }
-.sea-face-back {
+
+.build{
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #f1f1f1;
+}
+.cardContainer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.cardContainer{
+  transform: rotateY(180deg);
+}
+.frontCard, .backCard{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+/* .sea-face-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -100,40 +124,44 @@ h5{
   backface-visibility: hidden;
 }
 .land-face-back {
-  position: absolute;
   width: 100%;
   height: 100%;
   /* display: flex; */
-  align-items: center;
+  /* align-items: center;
   justify-content: center;
   backface-visibility: hidden;
 }
 .build-here{
+  display: flex;
   width: 100px;
   height: 100px;
   /* background-image: url(https://image.shutterstock.com/image-vector/trendy-lettering-queen-gold-crown-260nw-1748371328.jpg); */
-  background-position: center;
+  /* background-position: center;
   backface-visibility: hidden;
   flex-direction: row;
-
-}
-
+} */
 /* .card-hover {
   box-shadow: 0px 0px 0px 3px rgb(45, 0, 128);
   box-sizing: border-box;
 } */
-.build-here:hover{
+/* .build-here:hover{
   background-color: transparent;
   width: 100px;
   height: 100px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid #f1f1f1; */
   /* perspective: 500px; */
   /* transform-style: preserve-3d; */
-  transition: transform 5s;
+  /* transition: transform 5s;
   transform: rotateY(180deg);
+}
+.build{
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
 }
 .build-here > p {
   position: relative;
   width: 25%;
-  height: 33.333%;
-}
+  height: 33.333%; */
+/* } */
