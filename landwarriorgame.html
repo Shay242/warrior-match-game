@@ -5,77 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./main.css" />
-    <script src="./main.js"></script>
-    <title>Land Warrior Queens Memory Game</title>
+    <title>Warrior Queens Match Game</title>
   </head>
-  <body onload="buildHtml()">
-    <div class="landwarriorbackground">
-      <div class="land-warrior-match-game">
-        <h1 style="text-align: center">Warrior Queens Match Game</h1>
+  <body>
+    <div class="land-background">
+      <div class="land-game">
+        <h1 style="text-align: center">Warrior Queens Match Games</h1>
       </div>
-      <div class="nav links"><a href="#">Hint</a></div>
+      <div class="nav links">
+        <a href="#">Hint</a>
+      </div>
       <button class="start">Start Game</button>
-
       <button class="new-game">New Game</button>
-
       <button class="reset-game">Reset Game</button>
-
-      <div id="build1" class="build-here">
+  
+      <div class="first">
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
       </div>
-      <div id="build2" class="build-here">
+      <div class="second">
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
       </div>
-      <div id="build3" class="build-here">
+      <div class="third">
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
       </div>
-      <div id="build4" class="build-here">
+      <div class="fourth">
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
+        <div
+          class="card color-hidden"
+          onclick="onCardClicked(event)"
+        ></div>
       </div>
-      <!-- <div id="build2" class="build-here">
-        <p>Checks only if the value is the same</p>
-      </div>
-      <div id="build3" class="build-here">
-        <p>Types of Variables</p>
-      </div>
-      <div id="build4" class="build-here">
-        <p>Creating a variable</p>
-      </div>
-      <!-- <div id="build5" class="build-here">
-        <p>==</p>
-      </div>
-      <div id="build6" class="build-here">
-        <P>Rounding corners of the content</P>
-      </div>
-      <div id="build7" class="build-here">
-        <p>UX Core Principles</p>
-      </div>
-      <div id="build8" class="build-here">
-        <p>String, Number, Array, Value</p>
-      </div>
-      <div id="build9" class="build-here">
-        <p>Adding what to a child overides the parent?</p>
-      </div>
-      <div id="build10" class="build-here">
-        <p>em or rem</p>
-      </div>
-      <div id="build11" class="build-here">
-        <p>git add., git commit -m "", git push</p>
-      </div>
-      <div id="build12" class="build-here">
-        <p>When considering a users accessability</p>
-      </div>
-      <div id="build13" class="build-here">
-        <p>Absolute</p>
-      </div>
-      <div id="build14" class="build-here">
-        <p>Boarder Radius</p>
-      </div>
-      <div id="build15" class="build-here">
-        <p>keyword, Name, Value</p>
-      </div>
-      <div id="build16" class="build-here">
-        <P>Useful, Usable, & Desirable</P>
-      </div> -->
-
       <div class="timmer">Time <span id="time-remaining">100</span></div>
       <div class="timmer">Flips <span id="flips">0</span></div>
+      <script src="./main.js"></script>
     </div>
   </body>
 </html>
