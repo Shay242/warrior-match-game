@@ -23,6 +23,32 @@
   width: 100%;
 }
 
+h2{
+  font-size: 12px;
+  color: brown;
+  font-style: oblique;
+  font-family: cursive;
+  padding: 25px;
+}
+h3{
+font-size: 12px;
+color: black;
+font-style: oblique;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h4{
+  font-size: 12px;
+  color: black;
+  font-style: oblique;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h5{
+font-size: 12px;
+color: black;
+font-style: oblique;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .start {
   border-radius: 20rem;
   width: 100px;

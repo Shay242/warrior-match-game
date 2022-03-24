@@ -12,9 +12,12 @@ const colors = [
   'black',
   'orange',
 ]
+const words = [
+  
+]
 
 const cards = [...document.querySelectorAll('.card')];
-for (let color of colors) {
+for (let items of items) {
   const cardAIndex = parseInt(Math.random() * cards.length);
   const cardA = cards [cardAIndex];
   cards.splice(cardAIndex, 1);
@@ -69,6 +72,7 @@ function onCardClicked(e) {
           clickedCard = null;
           if (combosFound === 8) {
              alert('Fantastic You beat the Warriors');
+             window.location.reload
           }
       }
   }
