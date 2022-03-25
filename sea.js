@@ -16,13 +16,14 @@ function startGame() {
   setNextQuestion()
 }
 
-function start() {
-  const start = document.getElementById("start-btn");
+function Start() {
+  const Start = document.getElementById("Timer");
   let min = 30;
    setInterval(() => {
-     if (min !== 0) {
-       start.innerHTML = `Start: ${min}`;
+     if (min !== -1) {
+       Timer.innerHTML = `Timer: ${min}`;
        min--;
+       setTimeout(function() { alert('Game Over! You Lose!'); }, 30000);
      }
   }, 1000);
 };
