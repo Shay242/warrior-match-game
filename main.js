@@ -28,37 +28,21 @@ for (let color of colors) {
   cardB.setAttribute("data-color", color);
 }
 
-function formatTimeLeft(time) {
-  const minutes = Math.floor(time / 60);
-  let seconds = time % 60;
-  if (seconds < 10) {
-    seconds = `0${seconds}`;
-  }
-  return `${minutes}:&{seconds}`;
-
-  const Time_Limit = 100;
-
-  let timePassed = 0;
-  let timeLeft = Time_Limit;
-
-  let timerInterval = null;
-
-    document.getElementById("starTimer").innerHTML = `
-    <span id="time-remaining" class="timmer">
-    ${formatTime(timeLeft)}</span>`
-
-    startTimer();
-
-    function startTimer() {
-      timerInterval = setInterval(() => {
-
-        timePassed = timePassed += 1;
-        timeLeft = Time_Limit - timePassed;
-
-        document.getElementById("time-remaining").innerHTML = formatTime(timeLeft);
-      }, 1000);
-    }
+function startGame() {
+  const time = document.getElementById("time");
+  let min = 60;
+  setInterval(() => {
+     if (min !== 0) {
+       time.innerHTML = `Time: ${min}`;
+       min--;
+     }
+  }, 1000);
 }
+
+function resetGame() {
+  window.location.reload();
+}
+
 
 function onCardClicked(e) {
   const target = e.currentTarget;
@@ -93,13 +77,12 @@ function onCardClicked(e) {
         preventClick = false;
       }, 500);
     } else {
-       combosFound++;
-          clickedCard = null;
-          if (combosFound === 8) {
-             alert('Fantastic You beat the Warriors');
-             window.location.reload
-          }
-      
+      combosFound++;
+      clickedCard = null;
+      if (combosFound === 8) {
+        alert("Fantastic You beat the Warriors");
+        window.location.reload;
       }
     }
   }
+}

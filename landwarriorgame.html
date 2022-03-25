@@ -15,9 +15,9 @@
       <div class="nav links">
         <a href="#">Hint</a>
       </div>
-      <button id="startGame" class="start">Start Game</button>
+      <button onclick="startGame()" id="startGame" class="start">Start Game</button>
       <button class="new-game">New Game</button>
-      <button id="resetGame" class="reset-game">Reset Game</button>
+      <button onclick="resetGame()" id="resetGame" class="reset-game">Reset Game</button>
   
       <div class="first">
         <div
@@ -91,7 +91,7 @@
           onclick="onCardClicked(event)"
         ></div>
       </div>
-      <div id="startTimer" class="timmer">Time <span id="time-remaining">100</span></div>
+      <div id="time" class="timmer">Time <span>1:00</span></div>
       <div class="timmer">Flips <span id="flips">0</span></div>
       <script src="./main.js"></script>
     </div>
