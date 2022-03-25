@@ -16,6 +16,7 @@ const words = [
   
 ]
 
+
 const cards = [...document.querySelectorAll('.card')];
 for (let items of items) {
   const cardAIndex = parseInt(Math.random() * cards.length);
@@ -29,6 +30,38 @@ for (let items of items) {
   cards.splice(cardBIndex, 1);
   cardB.className += ` ${color}`
   cardB.setAttribute('data-color', color);
+}
+
+function formatTimeLeft(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+  return `${minutes}:&{seconds}`;
+
+  const Time_Limit = 100;
+
+  let timePassed = 0;
+  let timeLeft = Time_Limit;
+
+  let timerInterval = null;
+
+    document.getElementById("starTimer").innerHTML = `
+    <span id="time-remaining" class="timmer">
+    ${formatTime(timeLeft)}</span>`
+
+    startTimer();
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+
+        timePassed = timePassed += 1;
+        timeLeft = Time_Limit - timePassed;
+
+        document.getElementById("time-remaining").innerHTML = formatTime(timeLeft);
+      }, 1000);
+    }
 }
 
 function onCardClicked(e) {
