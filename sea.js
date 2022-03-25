@@ -16,16 +16,16 @@ function startGame() {
   setNextQuestion()
 }
 
-// function start() {
-//   const startButton = document.getElementById("startButton");
-//   let min = 30;
-//   setInterval(() => {
-//     if (min !== 0) {
-//       startButton.innerHTML = `startButton: ${min}`;
-//       min--;
-//     }
-//   }, 1000);
-// }
+function start() {
+  const start = document.getElementById("start-btn");
+  let min = 30;
+   setInterval(() => {
+     if (min !== 0) {
+       start.innerHTML = `Start: ${min}`;
+       min--;
+     }
+  }, 1000);
+};
 
 function setNextQuestion() {
   resetState()  

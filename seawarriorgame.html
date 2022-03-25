@@ -10,6 +10,7 @@
   <body>
     <div class="container-background">
       <div class="container">
+        <div id="countDown" class="count">Time: <span>30</span></div>
         <div id="question-container" class="hide">
           <div id="question">Question</div>
           <div id="answer-buttons" class="btn-grid">
@@ -20,7 +21,7 @@
           </div>
         </div>
         <div class="controls">
-          <button id="start-btn" class="start-btn btn"> Start</button>
+          <button onclick="start()" id="start-btn" class="start-btn btn"> Start</button>
           <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
       </div>
