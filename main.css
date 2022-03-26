@@ -85,12 +85,13 @@ a {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.start {
+.start_btn .btn {
   border-radius: 20rem;
   width: 100px;
   padding: 8px;
   background-color: brown;
   color: blanchedalmond;
+  cursor: pointer;
 }
 .new-game {
   border-radius: 20rem;
@@ -98,6 +99,7 @@ a {
   padding: 8px;
   background-color: purple;
   color: blanchedalmond;
+  cursor: pointer;
 }
 .reset-game {
   border-radius: 20rem;
@@ -105,6 +107,7 @@ a {
   padding: 8px;
   background-color: green;
   color: blanchedalmond;
+  cursor: pointer;
 }
 
 .first,
