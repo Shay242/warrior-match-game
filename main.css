@@ -1,72 +1,88 @@
-.main-background{
+.main-background {
   background-image: url(https://uspto.report/TM/90660830/mark.png);
   background-repeat: no-repeat;
   background-position: center;
   background-color: darkgoldenrod;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+}
+.main-background {
+  background-image: url(https://i.pinimg.com/originals/b7/21/34/b72134112b54864e4948865375ecbb11.gif);
+  background-position: bottom;
+  width: 100%;
 }
 
-.land-background{
+.land-background {
   background-image: url(https://www.spectatornews.com/wp-content/uploads/2018/03/WEB_blackpanther_submitted-900x450.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100%;
 }
-
 .sea-background {
-  background-image: url(https://th.bing.com/th/id/R.ebebdb0286e61bd25b39946fbf1d7f1f?rik=IzUOHjzU0IMiYg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2f7FJFvJP.jpg&ehk=VfNjRRgcJjR%2ftWwAzJ4axMXjjh%2fgm6mjnnG6Km4TPa0%3d&risl=&pid=ImgRaw&r=0);
+  background-image: url(https://gifimage.net/wp-content/uploads/2017/09/animated-gif-images-of-water-1.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100%;
   height: 100vh;
   width: 100%;
 }
-h1{
-  font-size: 30px;
+.container-background {
+  /* background-image: url(https://th.bing.com/th/id/R.3b79f5fb893e9ff2497de88e2a3f63dc?rik=tDCfGNUvA9zsqA&riu=http%3a%2f%2fwww.alldesigncreative.com%2fwp-content%2fuploads%2f2014%2f10%2fAnimated-Flowing-Water-How-to-Create-Water-Flowing-Animation.gif&ehk=i10lWv1WGXN3ME7JjzgWyeo7Al9O3KRAGfi7Zflr9eU%3d&risl=&pid=ImgRaw&r=0); */
+  /* background-image: url(https://gifimage.net/wp-content/uploads/2017/09/animated-gif-images-of-water-1.gif); */
+  background-image: url(https://cur.glitter-graphics.net/pub/3673/3673037ah7wzsaxnc.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  height: 100vh;
+  width: 100%;
+}
+.h1 {
+  font-size: 35px;
   color: crimson;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-style: normal;
   text-align: center;
 }
 
-h2{
+h2 {
   font-size: 10px;
+  margin-top: 2rem;
   color: brown;
-  font-style: oblique;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 20px;
   text-align: center;
   font: bold;
 }
-h3{
-font-size: 12px;
-color: black;
-font-style: oblique;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-text-align: center;
-}
-h4{
+h3 {
   font-size: 12px;
   color: black;
   font-style: oblique;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
-h5{
-font-size: 12px;
-color: black;
-font-style: oblique;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-text-align: center;
+h4 {
+  font-size: 12px;
+  color: black;
+  font-style: oblique;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
 }
-a{
+h5 {
+  font-size: 12px;
+  color: black;
+  font-style: oblique;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+h6 {
+  text-align: center;
+  color: brown;
+}
+a {
   color: whitesmoke;
   font-size: 20px;
   padding: 10px;
   display: flex;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .start {
@@ -91,13 +107,16 @@ a{
   color: blanchedalmond;
 }
 
-.first, .second, .third, .fourth{
+.first,
+.second,
+.third,
+.fourth {
   text-align: center;
 }
-.first{
-  margin-top: 5rem;
+.first {
+  background-image: url();
 }
-.card{
+.card {
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -106,35 +125,35 @@ a{
   /* image: url(https://image.shutterstock.com/image-vector/trendy-lettering-queen-gold-crown-260nw-1748371328.jpg); */
   background-position: center;
 }
-.card-click{
+.card-click {
   box-shadow: 0px 0px 0px 3px rgb(192, 155, 53) (45, 0, 128);
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
-.red{
+.red {
   background-color: red;
 }
-.teal{
+.teal {
   background-color: teal;
 }
-.gray{
+.gray {
   background-color: gray;
 }
-.orange{
+.orange {
   background-color: orange;
 }
-.green{
+.green {
   background-color: black;
 }
-.yellow{
+.yellow {
   background-color: yellow;
 }
-.white{
+.white {
   background-color: white;
 }
-.blue{
+.blue {
   background-color: blue;
 }
-.color-hidden{
+.color-hidden {
   background-color: black;
 }
 
@@ -144,7 +163,7 @@ a{
   --hue-correct: 145;
 }
 
-.container-background{
+.container-background {
   --hue: var(--hue-neutral);
   padding: 0;
   margin: 0;
@@ -155,22 +174,21 @@ a{
   align-items: center;
   background-color: hsl(var(--hue), 100%, 20%);
 }
-.container{
+.container {
   background-color: tan;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
   padding: 10px;
   width: 800px;
   max-width: 80%;
-
 }
-.btn-grid{
+.btn-grid {
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 10px;
   margin: 20px 0;
 }
-.btn{
+.btn {
   --hue: var(--hue-neutral);
   border: 1px solid hs(var(--hue), 100%, 30%);
   background-color: hsl(var(--hue), 100%, 50%);
@@ -184,12 +202,13 @@ a{
 }
 .btn.correct {
   --hue: var(--hue-correct);
-  color: black
+  color: black;
 }
 .btn.wrong {
   --hue: var(--hue-wrong);
 }
-.start-btn, .next-btn {
+.start-btn,
+.next-btn {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 10px 20px;
@@ -201,7 +220,4 @@ a{
 }
 .hide {
   display: none;
-}
-.timmer {
-  color: red;
 }
