@@ -16,21 +16,34 @@ function startGame() {
   setNextQuestion()
 }
 
+function Start() {
+  const Start = document.getElementById("Timer");
+  let min = 30;
+   setInterval(() => {
+     if (min !== -1) {
+       Timer.innerHTML = `Timer: ${min}`;
+       min--;
+       setTimeout(function() { alert('Game Over! You Lose!'); }, 30000);
+     }
+  }, 1000);
+};
+
 function setNextQuestion() {
   resetState()  
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
+
 function showQuestion(question) {
   questionElement.innerText = question.question
   question.answers.forEach(answer => {
-      const button = document.createElement('button')
-      button.innerText = answer. text
-      button.classList.add('btn')
-      if (answer.correct) {
-          button.dataset.correct =answer.correct
-      }
-      button.addEventListener('click', selectAnswer)
-      answerButtonsElement.appendChild(button)
+    const button = document.createElement('button')
+    button.innerText = answer. text
+    button.classList.add('btn')
+    if (answer.correct) {
+      button.dataset.correct =answer.correct
+    }
+    button.addEventListener('click', selectAnswer)
+    answerButtonsElement.appendChild(button)
   })
 }
 

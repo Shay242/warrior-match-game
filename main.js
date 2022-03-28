@@ -1,5 +1,5 @@
 let clickedCard = null;
-let preventClick = false;
+let preventClick = true;
 let combosFound = 0;
 
 const colors = [
@@ -28,44 +28,71 @@ for (let color of colors) {
   cardB.setAttribute("data-color", color);
 }
 
+
+
+
+
+function startGame() {
+  preventClick = false;
+  const time = document.getElementById("time");
+  let min = 60;
+  setInterval(() => {
+     if (min !== -1) {
+       time.innerHTML = `Time: ${min}`;
+       min--;
+       setTimeout(function () {
+         alert("Game Over! You Lose!");
+       }, 60000);
+     }
+  }, 1000);
+}
+
+function resetGame() {
+  window.location.reload();
+}
+
+
+
+
 function onCardClicked(e) {
   const target = e.currentTarget;
-
-  if (
-    preventClick ||
-    target === clickedCard ||
-    target.className.includes("done")
-  ) {
-    return;
-  }
-
-  target.className = target.className.replace("color-hidden", "").trim();
-  target.className += " done";
-
-  if (!clickedCard) {
-    // if card has not been clicked, keep track of card, display it's color
-    clickedCard = target;
-  } else if (clickedCard) {
-    // if we have clicked a card, check to see if new card matches the old card color
     if (
-      clickedCard.getAttribute("data-color") !==
-      target.getAttribute("data-color")
+      preventClick ||
+      target === clickedCard ||
+      target.className.includes("done")
     ) {
-      preventClick = true;
-      setTimeout(() => {
-        clickedCard.className =
-          clickedCard.className.replace("done", "").trim() + "color-hidden";
-        target.className =
-          target.className.replace("done", "").trim() + "color-hidden";
+      return;
+    }
+
+    target.className = target.className.replace("color-hidden", "").trim();
+    target.className += " done";
+
+    if (!clickedCard) {
+      // if card has not been clicked, keep track of card, display it's color
+      clickedCard = target;
+    } else if (clickedCard) {
+      // if we have clicked a card, check to see if new card matches the old card color
+      if (
+        clickedCard.getAttribute("data-color") !==
+        target.getAttribute("data-color")
+      ) {
+        preventClick = true;
+        setTimeout(() => {
+          clickedCard.className =
+            clickedCard.className.replace("done", "").trim() + "color-hidden";
+          target.className =
+            target.className.replace("done", "").trim() + "color-hidden";
+          clickedCard = null;
+          preventClick = false;
+        }, 500);
+      } else {
+        combosFound++;
         clickedCard = null;
-        preventClick = false;
-      }, 500);
-    } else {
-      combosFound++;
-      clickedCard = null;
-      if (combosFound === 8) {
-        alert("Fantastic You beat the Warriors");
+        if (combosFound === 8) {
+          alert("Fantastic You beat the Warriors");
+          window.location.reload;
+        }
       }
     }
   }
-}
+  
