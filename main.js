@@ -1,6 +1,5 @@
 let clickedCard = null;
-let preventClick = false;
-let canPlayGame = false;
+let preventClick = true;
 let combosFound = 0;
 
 const colors = [
@@ -30,11 +29,11 @@ for (let color of colors) {
 }
 
 
-// startButton.addEventListener('click', startGame)
+
 
 
 function startGame() {
-  preventClick = true;
+  preventClick = false;
   const time = document.getElementById("time");
   let min = 60;
   setInterval(() => {
@@ -57,7 +56,6 @@ function resetGame() {
 
 function onCardClicked(e) {
   const target = e.currentTarget;
-  if (preventClick == true) {
     if (
       preventClick ||
       target === clickedCard ||
@@ -96,7 +94,5 @@ function onCardClicked(e) {
         }
       }
     }
-  }else {
-
   }
-}
+  

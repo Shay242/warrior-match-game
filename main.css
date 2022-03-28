@@ -10,6 +10,7 @@
   background-image: url(https://i.pinimg.com/originals/b7/21/34/b72134112b54864e4948865375ecbb11.gif);
   background-position: bottom;
   width: 100%;
+  background-size: cover;
 }
 
 .land-background {
@@ -38,44 +39,45 @@
   width: 100%;
 }
 .h1 {
-  font-size: 35px;
-  color: crimson;
+  font-size: 50px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: normal;
   text-align: center;
+  color: crimson;
 }
 
 h2 {
-  font-size: 10px;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 2rem;
-  color: brown;
   text-align: center;
   font: bold;
 }
 h3 {
-  font-size: 12px;
+  font-size: 20px;
   color: black;
   font-style: oblique;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
 h4 {
-  font-size: 12px;
+  font-size: 20px;
   color: black;
   font-style: oblique;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
 h5 {
-  font-size: 12px;
+  font-size: 20px;
   color: black;
   font-style: oblique;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
 h6 {
+  font-size: 20px;
   text-align: center;
-  color: brown;
+  color: blue;
 }
 a {
   color: whitesmoke;
@@ -85,7 +87,7 @@ a {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.start_btn .btn {
+.start_btn {
   border-radius: 20rem;
   width: 100px;
   padding: 8px;
@@ -125,7 +127,7 @@ a {
   height: 100px;
   background-color: rgb(63, 7, 77);
   cursor: pointer;
-  /* image: url(https://image.shutterstock.com/image-vector/trendy-lettering-queen-gold-crown-260nw-1748371328.jpg); */
+  /* background-image: url(https://image.shutterstock.com/image-vector/trendy-lettering-queen-gold-crown-260nw-1748371328.jpg); */
   background-position: center;
 }
 .card-click {
@@ -145,7 +147,7 @@ a {
   background-color: orange;
 }
 .green {
-  background-color: black;
+  background-color: green;
 }
 .yellow {
   background-color: yellow;
