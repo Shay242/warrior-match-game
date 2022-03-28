@@ -26,12 +26,12 @@
   background-size: cover;
   background-position: 100%;
   height: 100vh;
-  width: 100%; */
-}
+  width: 100%;
+} */
 .container-background {
   /* background-image: url(https://th.bing.com/th/id/R.3b79f5fb893e9ff2497de88e2a3f63dc?rik=tDCfGNUvA9zsqA&riu=http%3a%2f%2fwww.alldesigncreative.com%2fwp-content%2fuploads%2f2014%2f10%2fAnimated-Flowing-Water-How-to-Create-Water-Flowing-Animation.gif&ehk=i10lWv1WGXN3ME7JjzgWyeo7Al9O3KRAGfi7Zflr9eU%3d&risl=&pid=ImgRaw&r=0); */
   /* background-image: url(https://gifimage.net/wp-content/uploads/2017/09/animated-gif-images-of-water-1.gif); */
-  background-image: url(https://cur.glitter-graphics.net/pub/3673/3673037ah7wzsaxnc.gif);
+  /* background-image: url(https://cur.glitter-graphics.net/pub/3673/3673037ah7wzsaxnc.gif); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100%;
@@ -111,7 +111,6 @@ a {
   color: blanchedalmond;
   cursor: pointer;
 }
-
 .first,
 .second,
 .third,
