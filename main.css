@@ -1,5 +1,5 @@
 .main-background {
-  background-image: url(https://uspto.report/TM/90660830/mark.png);
+  /* background-image: url(https://uspto.report/TM/90660830/mark.png); */
   background-repeat: no-repeat;
   background-position: center;
   background-color: darkgoldenrod;
@@ -7,7 +7,7 @@
   width: 100%;
 }
 .main-background {
-  background-image: url(https://i.pinimg.com/originals/b7/21/34/b72134112b54864e4948865375ecbb11.gif);
+  /* background-image: url(https://i.pinimg.com/originals/b7/21/34/b72134112b54864e4948865375ecbb11.gif); */
   background-position: bottom;
   width: 100%;
 }
