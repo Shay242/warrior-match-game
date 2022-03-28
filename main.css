@@ -20,13 +20,13 @@
   height: 100vh;
   width: 100%;
 }
-.sea-background {
+/* .sea-background {
   background-image: url(https://gifimage.net/wp-content/uploads/2017/09/animated-gif-images-of-water-1.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100%;
   height: 100vh;
-  width: 100%;
+  width: 100%; */
 }
 .container-background {
   /* background-image: url(https://th.bing.com/th/id/R.3b79f5fb893e9ff2497de88e2a3f63dc?rik=tDCfGNUvA9zsqA&riu=http%3a%2f%2fwww.alldesigncreative.com%2fwp-content%2fuploads%2f2014%2f10%2fAnimated-Flowing-Water-How-to-Create-Water-Flowing-Animation.gif&ehk=i10lWv1WGXN3ME7JjzgWyeo7Al9O3KRAGfi7Zflr9eU%3d&risl=&pid=ImgRaw&r=0); */
@@ -162,13 +162,18 @@ a {
   background-color: black;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded;
+}
+
 :root {
   --hue-neutral: 200;
   --hue-wrong: 0;
   --hue-correct: 145;
 }
 
-.container-background {
+body {
   --hue: var(--hue-neutral);
   padding: 0;
   margin: 0;
@@ -179,8 +184,16 @@ a {
   align-items: center;
   background-color: hsl(var(--hue), 100%, 20%);
 }
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+
+body.wrong {
+  --hue: var(--hue-wrong);
+}
 .container {
-  background-color: tan;
+  background-color: gray;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
   padding: 10px;
@@ -204,13 +217,6 @@ a {
 }
 .btn:hover {
   border-color: black;
-}
-.btn.correct {
-  --hue: var(--hue-correct);
-  color: black;
-}
-.btn.wrong {
-  --hue: var(--hue-wrong);
 }
 .start-btn,
 .next-btn {
