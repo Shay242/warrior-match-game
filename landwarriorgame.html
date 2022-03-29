@@ -5,94 +5,165 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./main.css" />
-    <title>Warrior Queens Match Game</title>
+    <title>Warrior Queens Land Match Game</title>
   </head>
   <body>
     <div class="land-background">
-      <div class="land-game">
-        <h1 style="text-align: center">Warrior Queens Match Games</h1>
+      <h1 class="land-game">Land Warrior Match Game</h1>
+    <div class="game-container">
+      <div class="game-info-container">
+        <div class="game-info">
+          Time <span id="time-remaining">60</span>
+        </div>
+        <div class="game-info">
+          Flips <span id="flips">0</span>
+        </div>
       </div>
-      <div class="nav links">
-        <a href="#">Hint</a>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
       </div>
-      <button onclick="startGame()" id="startGame_btn" class="start_btn">Start Game</button>
-      
-      <button onclick="resetGame()" id="resetGame" class="reset-game">Reset Game</button>  
-      <div class="first">
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
       </div>
-      <div class="second">
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
       </div>
-      <div class="third">
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
       </div>
-      <div class="fourth">
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
       </div>
-      <div id="time" class="timmer">Time: <span>60</span></div>
-      <div class="timmer">Flips <span id="flips">0</span></div>
-      <script src="./main.js"></script>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card-back">
+          <img class="panter" src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg">
+        </div>
+        <div class="card-front">
+          <img class="wq" src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+          style="width:100px;height:100px">
+        </div>
+      </div>
+    </div> 
     </div>
   </body>
 </html>
