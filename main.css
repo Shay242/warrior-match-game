@@ -203,9 +203,6 @@ a {
   backface-visibility: hidden;
 }
 
-.game-container:hover, .game-info-container {
-  transform: rotateY(180deg);
-}
 
 .card-front, .card-back {
   position: absolute;
