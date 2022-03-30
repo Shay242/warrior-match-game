@@ -7,7 +7,8 @@
   background-image: url(https://uspto.report/TM/90660830/mark.png);
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  border: 10px solid goldenrod;
+  height: 110vh;
 }
 
 .land-background {
@@ -31,14 +32,14 @@
 
 .land-game {
   color: crimson;
-  font-size: xx-large;
-  font-family: fantasy;
+  font-size: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: oblique;
   text-align: center;
 }
 .color-game {
   color: crimson;
   font-size: 30px;
-  font-family: fantasy;
 }
 .sea-game {
   color: darkblue;
@@ -69,12 +70,25 @@ h7 {
   font-style: oblique;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
+  padding: 20px;
 }
 
 h6 {
   font-size: 20px;
   text-align: center;
   color: blue;
+}
+h8 {
+  font-size: medium;
+  color: red;
+  font-family: monospace;
+  animation: blinking .5s infinite;
+  padding: 10px;
+  border-style: dotted;
+  color: yellow;
+}
+@keyframes blinking{
+  100%{color: black;}
 }
 
 a {
@@ -116,6 +130,7 @@ a {
   background-color: crimson;
   cursor: pointer;
   background-position: center;
+  border-radius: 15px;
 }
 
 .timmer {
