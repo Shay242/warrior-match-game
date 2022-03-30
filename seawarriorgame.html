@@ -5,91 +5,223 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./main.css" />
-    <title>Warrior Queens Match Game</title>
+    <title>Warrior Queens Land Match Game</title>
   </head>
   <body>
     <div class="sea-background">
-      <div class="sea-game">
-        <h1 style="text-align: center">Warrior Queens Match Games</h1>
+      <h1 style="text-align: center" class="sea-game">Sea Warrior Match Game</h1>
+      <div class="overlay-text">Click to Start</div>
+      <div  id="game-over-text" class="overlay-text">GAME OVER
+        <span class="overlay-text-small">Click to Restart</span>
       </div>
-      <button onclick="startGame()" id="startGame_btn" class="start_btn">Start Game</button>
+      <div  id="victory" class="overlay-text">VICTORY
+        <span class="overlay-text-small">Click to Restart</span>
+      </div>
       
+      <button onclick="startGame()" id="startGame_btn" class="start_btn">Start Game</button>
       <button onclick="resetGame()" id="resetGame" class="reset-game">Reset Game</button>
-      <h7>Please click Start to begin game</h7>  
-      <div class="first">
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
+      <div class="game-container">
+        <div class="game-info-container">
+          <div class="game-info">
+            <div id="time" class="time">Time: <span>60</span></div>
+          </div>
+          <div class="game-info">
+            <div class="flips">Flips <span id="flips">0</span></div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="atlanna"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNaIeWfDMn1T3-mxo6_loGMtMZubdOIx4bOuMp8OfVFAgU6s5XjqwzdYnpntZ90S1o5aA&usqp=CAU"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="atlanna"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNaIeWfDMn1T3-mxo6_loGMtMZubdOIx4bOuMp8OfVFAgU6s5XjqwzdYnpntZ90S1o5aA&usqp=CAU"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="ariel"
+            src="https://cdnb.artstation.com/p/assets/images/images/037/880/455/micro_square/talitha-two-moons-asset.jpg?1621546346"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="elsa"
+            src="http://images6.fanpop.com/image/photos/39600000/Elsa-Water-disney-princess-39686369-200-200.png"
+            style="width: 100px; height: 100px"> 
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="mera"
+            src="https://wegotthiscovered.com/wp-content/uploads/2020/11/emilia-clarke-mera-aquaman-2-100x100.jpg"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="aquman"
+            src="https://dominicanstar.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-08-at-9.32.33-PM-415x381.png"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="arieltwo"
+            src="https://paintbynumberscanvas.com/wp-content/uploads/2021/09/Ariel-Mermaid-paint-by-numbers-100x100.jpg"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="queen-atlanna"
+            src="https://www.infamousinspiration.com/wp-content/uploads/2019/12/Marvel-Queen-Atlanta-Pop-Art-Poster-by-Keetatat-Sitthiket-247x296.jpg"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="water"
+            src="https://imgs.mongabay.com/wp-content/uploads/sites/20/2022/03/28111235/Chromis-Bonaire-100x100.jpg"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="elsa"
+            src="http://images6.fanpop.com/image/photos/39600000/Elsa-Water-disney-princess-39686369-200-200.png"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="arieltwo"
+            src="https://paintbynumberscanvas.com/wp-content/uploads/2021/09/Ariel-Mermaid-paint-by-numbers-100x100.jpg"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="ariel"
+            src="https://cdnb.artstation.com/p/assets/images/images/037/880/455/micro_square/talitha-two-moons-asset.jpg?1621546346"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="water"
+            src="https://imgs.mongabay.com/wp-content/uploads/sites/20/2022/03/28111235/Chromis-Bonaire-100x100.jpg"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="mera"
+            src="https://wegotthiscovered.com/wp-content/uploads/2020/11/emilia-clarke-mera-aquaman-2-100x100.jpg"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="aquaman"
+            src="https://dominicanstar.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-08-at-9.32.33-PM-415x381.png"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="queen-atlanna"
+            src="https://www.infamousinspiration.com/wp-content/uploads/2019/12/Marvel-Queen-Atlanta-Pop-Art-Poster-by-Keetatat-Sitthiket-247x296.jpg"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f56c8dc-d52b-4669-a972-d5d27c6dc147/dc5h6sx-1c7e4cbf-82ba-477e-a9c4-b7d50afe955e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmNTZjOGRjLWQ1MmItNDY2OS1hOTcyLWQ1ZDI3YzZkYzE0N1wvZGM1aDZzeC0xYzdlNGNiZi04MmJhLTQ3N2UtYTljNC1iN2Q1MGFmZTk1NWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D7cAGhnUGv0Q0kVip9-vyHcQV9ii8jJB3rjmLbs0L44"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
       </div>
-      <div class="second">
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-      </div>
-      <div class="third">
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-      </div>
-      <div class="fourth">
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-        <div
-          class="card color-hidden"
-          onclick="onCardClicked(event)"
-        ></div>
-      </div>
-      <div id="time" class="timmer">Time: <span>60</span></div>
-      <div class="timmer">Flips <span id="flips">0</span></div>
       <script src="./main.js"></script>
     </div>
   </body>

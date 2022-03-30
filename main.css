@@ -41,12 +41,12 @@
   font-family: fantasy;
 }
 .sea-game {
-  color: goldenrod;
-  font-size: 30px;
+  color: darkblue;
+  font-size: xx-large;
 }
 .h1 {
   font-size: 50px;
-  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-family: Georgia, Times, "Times New Roman", serif;
   font-style: normal;
   text-align: center;
   color: crimson;
@@ -60,7 +60,10 @@ h2 {
   font: bold;
 }
 
-h3, h4, h5, h7 {
+h3,
+h4,
+h5,
+h7 {
   font-size: 20px;
   color: crimson;
   font-style: oblique;
@@ -85,9 +88,9 @@ a {
 .start_btn {
   display: flex;
   flex-direction: column;
-  border-radius: 20rem;
+  border-radius: 15rem;
   padding: 10px;
-  background-color: teal;
+  background-color: crimson;
   color: blanchedalmond;
   cursor: pointer;
 }
@@ -103,9 +106,8 @@ a {
 .second,
 .third,
 .fourth {
- text-align: center;
- padding: 1rem;
-
+  text-align: center;
+  padding: 1rem;
 }
 .card {
   display: inline-block;
@@ -152,65 +154,96 @@ a {
   background-color: crimson;
 }
 
+* {
+  box-sizing: border-box;
+}
+html {
+  min-width: 100vh;
+}
+
 .game-info-container {
-  /* position: relative; */
-  width: 100%;
-  height: 100%;
-  /* transition: transform 0.8s; */
-  /* transform-style: preserve-3d; */
   grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
 }
-.game-info {
-  color:bisque;
-  font-family: fantasy;
-  font-size: 2em;
-}
-
 .game-container {
-  background-color: transparent;
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-gap: 10px;
   margin: 50px;
   justify-content: center;
-  perspective: 1000px;
+  perspective: 500px;
 }
-
 .cards {
   position: relative;
-  width: 100px;
+  background-color: black;
   height: 100px;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+  width: 100px;
 }
 
-/* .panter {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-} */
-
-.card-front {
+.card-face {
   position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
-
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
   backface-visibility: hidden;
+  transition: transform 500ms ease-in-out;
 }
 
-
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+.cards:hover .card-back {
+  transform: rotateY(0);
 }
+.cards:hover .card-front {
+  transform: rotateY(-180deg);
+}
+
 .card-back {
-  background-color: red;
   transform: rotateY(180deg);
+}
+
+.overlay-text {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: crimson;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.overlay-text-small {
+  font-size: 0.3em;
+}
+
+.overlay-text.visible {
+  display: flex;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 10em;
+  }
+}
+
+@media (max-width: 600px) {
+  .game-container {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .game-info-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }

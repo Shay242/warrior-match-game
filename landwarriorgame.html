@@ -9,254 +9,221 @@
   </head>
   <body>
     <div class="land-background">
-      <h1 class="land-game">Land Warrior Match Game</h1>
+      <h1 style="text-align: center" class="land-game">Land Warrior Match Game</h1>
+      <div class="overlay-text visible">Click to Start</div>
+      <div  id="game-over-text" class="overlay-text">GAME OVER
+        <span class="overlay-text-small">Click to Restart</span>
+      </div>
+      <div  id="victory" class="overlay-text">VICTORY
+        <span class="overlay-text-small">Click to Restart</span>
+      </div>
+      
+      <button onclick="startGame()" id="startGame_btn" class="start_btn">Start Game</button>
+      <button onclick="resetGame()" id="resetGame" class="reset-game">Reset Game</button>
       <div class="game-container">
         <div class="game-info-container">
-          <div class="game-info">Time <span id="time-remaining">60</span></div>
-          <div class="game-info">Flips <span id="flips">0</span></div>
-        </div>
-        <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="game-info">
+            <div id="time" class="time">Time: <span>60</span></div>
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="game-info">
+            <div class="flips">Flips <span id="flips">0</span></div>
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="panther"
+            src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
+            style="width: 100px; height: 100px">
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="wonder"
+            src="https://media.vanityfair.com/photos/595653431d38da755813d6cf/1:1/w_200,h_200,c_limit/wonder-woman-inspires-female-directors.png"
+            style="width: 100px; height: 100px">
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="red"
+            src="https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/69/2018/05/23190036/e_Dora_05232018-200x200.jpg"
+            style="width: 100px; height: 100px">
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="xena"
+            src="https://m.media-amazon.com/images/M/MV5BZjM1M2JjNDgtYmJmMS00OGFiLWI4MjktODBmYWE3NWEwZjNjXkEyXkFqcGdeQXVyODc0MjMwMzQ@._V1_UY200_CR33,0,200,200_AL_.jpg"
+            style="width: 100px; height: 100px"> 
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="two"
+            src="https://media.vanityfair.com/photos/5a82069a47ef634077a69d7d/1:1/w_200,h_200,c_limit/Black-Panther-Box-Office-Gold.jpg
+            "
+            style="width: 100px; height: 100px">
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="mulan"
+            src="https://screenanarchy.com/assets_c/2020/09/Mulan-thumb-200x200-79598.jpg"
+            style="width: 100px; height: 100px">
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="captain"
+            src="https://akns-images.eonline.com/eol_images/Entire_Site/2018818/rs_600x600-180918054810-600.captain-marvel.91818.jpg?fit=around%7C100:100&output-quality=90&crop=100:100;center,top"
+            style="width: 100px; height: 100px">
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="widow"
+            src="https://d1i6tehnj672py.cloudfront.net/wp-content/uploads/2011/10/ScarlettJohansson-Black-Widow03-100x100.jpg"
+            style="width: 100px; height: 100px">
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="captain"
+            src="https://akns-images.eonline.com/eol_images/Entire_Site/2018818/rs_600x600-180918054810-600.captain-marvel.91818.jpg?fit=around%7C100:100&output-quality=90&crop=100:100;center,top"
+            style="width: 100px; height: 100px">
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="two"
+            src="https://media.vanityfair.com/photos/5a82069a47ef634077a69d7d/1:1/w_200,h_200,c_limit/Black-Panther-Box-Office-Gold.jpg"
+            style="width: 100px; height: 100px">
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="wonder"
+            src="https://media.vanityfair.com/photos/595653431d38da755813d6cf/1:1/w_200,h_200,c_limit/wonder-woman-inspires-female-directors.png"
+            style="width: 100px; height: 100px">
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="mulan"
+            src="https://screenanarchy.com/assets_c/2020/09/Mulan-thumb-200x200-79598.jpg"
+            style="width: 100px; height: 100px">
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="red"
+            src="https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/69/2018/05/23190036/e_Dora_05232018-200x200.jpg"
+            style="width: 100px; height: 100px">
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="xena"
+            src="https://m.media-amazon.com/images/M/MV5BZjM1M2JjNDgtYmJmMS00OGFiLWI4MjktODBmYWE3NWEwZjNjXkEyXkFqcGdeQXVyODc0MjMwMzQ@._V1_UY200_CR33,0,200,200_AL_.jpg"
+            style="width: 100px; height: 100px">
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
         <div class="cards">
-          <div class="card-back">
-            <img
-              class="panter"
-              src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
-            />
+          <div class="card-back card-face">
+            <img class="widow"
+            src="https://d1i6tehnj672py.cloudfront.net/wp-content/uploads/2011/10/ScarlettJohansson-Black-Widow03-100x100.jpg"
+            style="width: 100px; height: 100px">
           </div>
-          <div class="card-front">
-            <img
-              class="wq"
-              src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
-              style="width: 100px; height: 100px"
-            />
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-back card-face">
+            <img class="panter"
+            src="https://localist-images.azureedge.net/photos/716828/big_square/e674938cfbd23a93d81bcce2a3c381ee52a2e6f1.jpg"
+            style="width: 100px; height: 100px">
+          </div>
+          <div class="card-front card-face">
+            <img class="wq"
+            src="https://toppng.com/uploads/preview/warrior-queen-logo-11563904325jvt5eq9fsq.png"
+            style="width: 100px; height: 100px">
           </div>
         </div>
       </div>
-      <script src="./main.js"></script>
+      <script src="./land.js"></script>
     </div>
   </body>
 </html>
