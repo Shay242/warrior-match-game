@@ -133,7 +133,7 @@ a {
   border-radius: 15px;
 }
 
-.timmer {
+.timer {
   color: white;
   font-size: xx-large;
 }
@@ -207,10 +207,10 @@ html {
   transition: transform 500ms ease-in-out;
 }
 
-.cards:hover .card-back {
+.cards.visible .card-back {
   transform: rotateY(0);
 }
-.cards:hover .card-front {
+.cards.visible .card-front {
   transform: rotateY(-180deg);
 }
 
