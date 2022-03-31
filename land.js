@@ -71,7 +71,7 @@ class LandWarrior {
     }
     startCountDown() {
         return setInterval(() => {
-            this.timeRemaining--;
+            this.timer--;
             this.timer.innerText = this.timer;
             if(this.timer === 0)   
                 this.gameOver();
