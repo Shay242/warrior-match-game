@@ -1,4 +1,4 @@
-class LandWarrior {
+class seawarrior {
     constructor(totalTime, cards) {
         this.cardsArray = cards;
         this.totalTime = totalTime;
@@ -8,7 +8,7 @@ class LandWarrior {
 
     }
     startGame() {
-        // this.cardToCheck = null;
+        this.cardToCheck = null;
         this.totalClicks = 0;
         this.timeRemaining = this.totalTime;
         this.matchedCards = [];
@@ -103,7 +103,7 @@ class LandWarrior {
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('cards'));
-    let game = new LandWarrior(100, cards);
+    let game = new seawarrior(100, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
