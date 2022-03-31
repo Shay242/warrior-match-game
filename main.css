@@ -74,8 +74,7 @@ h2 {
 
 h3,
 h4,
-h5,
-h7 {
+h5 {
   font-size: 15px;
   color: crimson;
   font-family: Arial, Helvetica, sans-serif;
@@ -88,7 +87,7 @@ h6 {
   text-align: center;
   color: blue;
 }
-h8 {
+.h8 {
   font-size: medium;
   color: goldenrod;
   font-family: monospace;

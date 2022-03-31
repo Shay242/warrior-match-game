@@ -19,7 +19,7 @@ class LandWarrior {
             this.busy = false;
         },  500);
         this.hideCards();
-        this.timer.innerText = this.timer;
+        this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks;
     }
     hideCards() {
@@ -72,8 +72,8 @@ class LandWarrior {
     startCountDown() {
         return setInterval(() => {
             this.timeRemaining--;
-            this.timer.innerText = this.timer;
-            if(this.timer === 0)   
+            this.timer.innerText = this.timeRemaining;
+            if(this.timeRemaining === 0)   
                 this.gameOver();
         }, 1000);
     }
