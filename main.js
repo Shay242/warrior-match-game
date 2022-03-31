@@ -28,10 +28,6 @@ for (let color of colors) {
   cardB.setAttribute("data-color", color);
 }
 
-
-
-
-
 function startGame() {
   preventClick = false;
   const time = document.getElementById("time");
@@ -50,9 +46,6 @@ function startGame() {
 function resetGame() {
   window.location.reload();
 }
-
-
-
 
 function onCardClicked(e) {
   const target = e.currentTarget;

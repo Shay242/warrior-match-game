@@ -5,26 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./main.css" />
-    <title>Warrior Queens Sea Match Game</title>
+    <title>Warrior Queens Land Match Game</title>
   </head>
   <body>
     <div class="sea-background">
-      <h1 style="text-align: center" class="sea-warrior">Sea Warrior Match Game</h1>
-      <div class="overlay-text">Click to Start</div>
+      <h1 class="sea-game">Sea Warrior Match Game</h1>
+      <div class="overlay-text visible">Click to Start</div>
       <div  id="game-over-text" class="overlay-text">GAME OVER
         <span class="overlay-text-small">Click to Restart</span>
       </div>
       <div  id="victory" class="overlay-text">VICTORY
         <span class="overlay-text-small">Click to Restart</span>
       </div>
-      
       <div class="game-container">
         <div class="game-info-container">
           <div class="game-info">
-            <div id="time" class="time">Time: <span>60</span></div>
+            Time <span id="tim-remaining">100</span>
           </div>
           <div class="game-info">
-            <div class="flips">Flips <span id="flips">0</span></div>
+            Flips <span id="flips">0</span>
           </div>
         </div>
         <div class="cards">
@@ -220,7 +219,7 @@
           </div>
         </div>
       </div>
-      <script src="./sea.js"></script>
+      <script src="./sea.js" async></script>
     </div>
   </body>
 </html>

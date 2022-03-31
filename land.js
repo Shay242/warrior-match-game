@@ -75,7 +75,7 @@ class LandWarrior {
             this.timer.innerText = this.timeRemaining;
             if(this.timeRemaining === 0)   
                 this.gameOver();
-        }, 1000);
+        },  1000);
     }
 
     gameOver() {

@@ -4,15 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./main.css" />
+    <link href="main.css" rel="stylesheet" />
     <title>Warrior Queens Land Match Game</title>
   </head>
   <body>
     <div class="land-background">
-      <div class="land-warrior">
-        <h1 style="text-align: center">Land Warrior Match Game</h1>
-      </div>
-      
+      <h1 style="text-align: center" class="page-title">Land Warrior Match Game</h1>
       <div class="overlay-text visible">Click to Start</div>
       <div  id="game-over-text" class="overlay-text">GAME OVER
         <span class="overlay-text-small">Click to Restart</span>
@@ -23,10 +20,10 @@
       <div class="game-container">
         <div class="game-info-container">
           <div class="game-info">
-            Time <span id="time-remaining">>60</span></div>
+            <div id="time-remaining" class="time">Time: <span>60</span></div>
           </div>
           <div class="game-info">
-            Flips <span id="flips">0</span></div>
+            <div class="flips">Flips <span id="flips">0</span></div>
           </div>
         </div>
         <div class="cards">
